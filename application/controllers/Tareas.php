@@ -15,7 +15,6 @@ class Tareas extends CI_Controller {
     public function mostrar()
     {
         $data['session'] = $this->session->userdata;
-        //$data['tareas'] = $this->tareas_model->get_entradas_paciente( $idPaciente );
 
         $this->load->view('pages/app', $data);
     }
