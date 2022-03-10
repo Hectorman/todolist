@@ -1,0 +1,1558 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row > div {
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33333333%;
+}
+
+.col-30 {
+  width: 30%;
+}
+
+.col-60 {
+  width: 60%;
+}
+
+.col-40 {
+  width: 40%;
+}
+
+.col-70 {
+  width: 70%;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Intro Book';
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+#app {
+  overflow: hidden;
+}
+  
+.main-header {
+  padding: 40px 20px;
+  background-color: #cdd5f5;
+  background-image: url(../img/dot-grid.png);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #4D4D4D;
+  font-family: 'Intro Book';
+  position: relative;
+  z-index: 9;
+}
+
+.privado-page header {
+  background-color: #fff;
+}
+
+header .logo {
+ 
+}
+
+.main-header .logo a:first-child img {
+  width: 200px;
+}
+
+.main-header .logo a:last-child img {
+  width: 140px;
+}
+
+.main-header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.main-header li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 3px;
+}
+
+.main-header li a {
+  color: #204051;
+  font-family: 'Intro';
+  font-weight: bold;
+}
+
+.main-header .user-submenu li a {
+  color: #204051;
+}
+
+.main-header li a.active {
+  color: #3A7E8B;
+  border-bottom: 2px solid #3A7E8B;
+  font-family: 'Intro';
+  font-weight: bold;
+}
+
+.main-header > div {
+  display: flex;
+  align-items: center;
+}
+
+.fixed-buttons {
+  position: fixed;
+  left: 0;
+  bottom: 15%;
+  z-index: 11;
+}
+
+.logueado .fixed-buttons {
+  display: none;
+}
+
+.fixed-buttons a {
+  display: flex;
+  width: 200px;
+  background-color: #204051;
+  color: #fff;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.3em;
+  line-height: 1;
+  padding: 5px;
+  border-radius: 0 30px 30px 0;
+  margin-bottom: 20px;
+}
+
+.fixed-buttons a:last-child {
+  background-color: #FF755A;
+}
+
+.fixed-buttons a img {
+  margin-left: 30px;
+  width: 35px;
+}
+
+.pop-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 10;
+  background-color: rgba(0,0,0,.6);
+  padding: 20px;
+}
+
+.pop-wrapper.open {
+  display: flex;
+} 
+
+.pop-wrapper > div {
+  pointer-events: auto;
+}
+
+.login-wrapper {
+  
+}
+
+.login-wrapper > div:last-child {
+  background-color: rgba(255,255,255,1);
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px 30px;
+  width: 350px;
+}
+
+.login-wrapper h2 {
+  color: #204051;
+  font-size: 1.8em;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.login-wrapper form {
+  margin-top: 50px;
+}
+
+.login-wrapper .input-group {
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.login-wrapper .register-form .input-group {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.login-wrapper .register-form .input-group-append {
+  margin-right: 10px;
+}
+
+.login-wrapper .input-group i {
+  color: #CE720D;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.login-wrapper .input-group input {
+  background: none;
+  border: 0;
+  outline: 0;
+  width: calc(100% - 26px);
+}
+
+#register-pop .input-group input {
+  width: 100%;
+}
+
+.login-wrapper .input-group input:focus {
+  outline: 0;
+}
+
+.login-wrapper .remember {
+  font-size: .9em;
+}
+
+.login-wrapper button {
+  background-color: #F9BF74;
+  color: #204051;
+  padding: 5px 20px;
+  margin: 10px 0;
+  border: 0;
+  border-radius: 25px;
+  font-size: 1.3em;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.login-wrapper .recovery {
+  font-size: .8em;
+}
+
+.login-wrapper .recovery a {
+  color: #3A7E8B;
+  text-decoration: underline;
+}
+
+.error {
+  margin: 0;
+  font-size: .8em;
+  color: red;
+  text-align: left;
+}
+
+.usuario-header {
+  width: 180px;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+section.full-screen {
+  min-height: calc(100vh - 212px);
+}
+
+.streaming {
+  background-image: url(../img/streaming.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.chat-wrapper iframe {
+  min-height: 350px;
+}
+
+.globe-title {
+  position: relative;
+}
+
+.globe-title span {
+  display: inline-block;
+  background-color: #FF755A;
+  border-radius: 20px;
+  padding: 5px 15px;
+  color: #204051;
+  font-family: 'Intro Black Alt';
+  font-weight: 900;
+  position: relative;
+}
+
+.globe-title span:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top: 10px solid #FF755A;
+  border-right: 10px solid transparent;
+  left: 10%;
+  top: 100%;
+}
+
+.noticias {
+  background-color: #F1F1F1;
+  padding: 80px 50px;
+  min-height: calc(100vh - 136px);
+  position: relative;
+}
+
+.noticias h2 {
+  font-family: 'Intro';
+  line-height: 1.2;
+  font-size: 1.3em;
+  color: #204051;
+}
+
+.noticias h2 a,
+.noticias h2 a:visited
+{
+  color: #204051;
+}
+
+.noticias p {
+  color: #204051;
+}
+
+.noticias .globo {
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.date {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.date .line {
+  flex-grow: 1;
+  background-color: #FF755A;
+  height: 2px;
+}
+
+.date span {
+  color: #3A7E8B;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.date span a {
+  color: #3A7E8B;
+}
+
+.instagram {
+  font-family: 'Intro';
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  color: #204051;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.instagram a {
+  color: #204051;
+}
+
+.ms-skin-default .ms-bullet {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #204051;
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
+
+.ms-skin-default .ms-bullet:nth-child(odd) {
+  background: #FF755A;
+}
+
+
+.ms-skin-default .ms-bullet.ms-bullet-selected {
+  background: #fff;
+}
+
+.ms-view {
+  background: #fff;
+}
+
+.ms-bullets.ms-dir-v {
+  top: 60%;
+}
+
+.error_msg {
+  position: absolute;
+  top: 100%;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background: #E11337;
+  left: 0;
+  width: 100%;
+}
+
+.user-thumb {
+  display: flex;
+  background: #204051;
+  color: #88DFE7;
+  border-radius: 35px;
+  padding: 5px 5px 5px 20px;
+  align-items: center;
+  margin: 15px 0 0 0;
+  font-weight: bold;
+  position: relative;
+  transition: all .3s;
+}
+
+.user-thumb img {
+  width: 50px;
+}
+
+.user-thumb:hover {
+  border-radius: 35px 35px 0 35px;
+}
+
+.user-thumb .user-submenu {
+  position: absolute;
+  top: 100%;
+  background-color: #f4f4f4;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all .3s;
+}
+
+.user-thumb:hover .user-submenu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.user-thumb .user-submenu li {
+  display: block;
+  padding: 3px 10px;
+}
+
+.user-thumb span {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.user-thumb > a {
+  color: #88DFE7;
+  font-size: .9em;
+}
+
+.main-nav li {
+  font-size: .9em;
+}
+
+footer {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+footer .social {
+  width: 300px;
+  text-align: right;
+}
+
+footer .social a {
+  display: inline-flex;
+  margin: 0 5px;
+  background: #204051;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social a:nth-child(2) {
+  background: #FF755A;
+}
+
+.logo-footer img {
+  width: 300px;
+}
+
+.galeria-videos {
+  padding: 80px 50px;
+  background-color: #F1F1F1;
+  text-align: center;
+  background-image: url(../img/body-points.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.galeria-videos .title {
+  margin-bottom: 30px;
+}
+
+.galeria-videos .globe-title {
+  font-size: 2em;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.noticias .orange-title {
+  color: #FF755A;
+  font-family: 'Intro';
+  text-decoration: underline;
+}
+
+.home-desc,
+.home-desc + a
+{
+  display: none;
+}
+
+#comments_list + a {
+  display: none;
+}
+
+/* #hcb_form_name {
+  display: none!important;
+} */
+
+#HCB_comment_box {
+  background-color: #f9f9f9;
+  padding: 10px 30px 30px 30px;
+}
+
+.streaming .container {
+  max-width: 800px;
+}
+
+#no_comments {
+  text-align: center;
+}
+
+.bienvenida {
+  background-color: #f9f9f9;
+  padding: 30px 30px 10px 30px;
+}
+
+.single-noticia h2.entry-title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.single-noticia iframe {
+  width: 100%;
+  height: 580px;
+}
+
+.single-noticia .date {
+  text-align: center;
+  display: block;
+  margin: 0 0 30px 0;
+}
+
+.single-noticia q {
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  color: #204051;
+  line-height: 1;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.single-noticia .featured-image {
+  margin-bottom: 30px;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.splide__pagination {
+  bottom: -40px;
+}
+
+.splide__pagination li button {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #204051;
+  width: 15px;
+  height: 15px;
+}
+
+.splide__pagination__page.is-active {
+  transform: scale(1.2);
+}
+
+.white-popup {
+  position: relative;
+  background: #F8F8F8;
+  padding: 50px;
+  width: auto;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+.white-popup .row {
+  align-items: center;
+}
+
+#profile-popup .profile-thumb {
+  padding: 12px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+#profile-popup h3 {
+  margin-bottom: 0;
+}
+
+#profile-popup h3 + p {
+  margin-top: 0;
+}
+
+.primary-btn {
+  background-color: #FF755A;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #204051;
+}
+
+.single-event-content {
+  background: #fff;
+  padding: 30px;
+}
+
+.single-event-content iframe {
+  width: 100%;
+  height: 480px;
+}
+
+.noticias .row {
+  flex-wrap: wrap;
+}
+
+.noticias .row > div {
+  margin-bottom: 40px;
+}
+
+.splide-videos iframe {
+  width: 100%!important;
+  height: 200px!important;
+}
+
+.pagination-links {
+  text-align: center;
+}
+
+.pagination-links > * {
+  display: inline-block;
+  background-color: rgba(0,0,0,.1);
+  padding: 5px 8px;
+  border-radius: 8px;
+  margin: 0 3px;
+  font-weight: bolder;
+  color: #333;
+  transition: all .3s;
+}
+
+.pagination-links > a:hover {
+  background-color: rgba(0,0,0,.15);
+}
+
+.pagination-links > strong {
+  background-color: #FF755A;
+  color: #fff;
+}
+
+.reuniones {
+  padding: 7vh 5vw 0;
+  text-align: center;
+  background-image: url(../img/reunion-bg.png);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  box-shadow: inset 0 3px 5px rgba(50, 0, 0, .3);
+}
+
+.reuniones_page header {
+  background-color: #28c5be;
+}
+
+.reuniones h1 {
+  font-family: 'Intro Black Alt';
+  font-size: 4.5em;
+  margin-bottom: 0;
+  line-height: 1;
+  word-wrap: break-word;
+}
+
+.reuniones h2 {
+  font-family: 'Intro Black Alt';
+  font-size: 3.5em;
+  margin-top: 0;
+  line-height: 1;
+}
+
+.reunion-list {
+  background: #241969;
+  background: -moz-linear-gradient(left,  #241969 0%, #631b8d 100%);
+  background: -webkit-linear-gradient(left,  #241969 0%,#631b8d 100%);
+  background: linear-gradient(to right,  #241969 0%,#631b8d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#241969', endColorstr='#631b8d',GradientType=1 );
+  border-radius: 80px 80px 0 0;
+  margin-top: 70px;
+  padding: 0 50px 10px 50px;
+}
+
+.reunion-list > h3 {
+  display: inline-block;
+  border-radius: 30px;
+  background: #37d6d0;
+  background: -moz-linear-gradient(left,  #37d6d0 0%, #19b4ab 100%);
+  background: -webkit-linear-gradient(left,  #37d6d0 0%,#19b4ab 100%);
+  background: linear-gradient(to right,  #37d6d0 0%,#19b4ab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37d6d0', endColorstr='#19b4ab',GradientType=1 );
+  color: #fff;
+  font-family: 'Intro Black Alt';
+  padding: 10px 25px;
+  font-size: 1.8em;
+  line-height: 1;
+  position: relative;
+  top: -20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.reunion-list h4 {
+  background: #fff;
+  font-family: 'Intro';
+  color: #000;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.reunion-list h4 a {
+  color: #000;
+}
+
+.insertar-codigo {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.insertar-codigo label {
+  font-family: 'intro_lightregular';
+  color: #fff;
+  display: block;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.insertar-codigo input {
+  width: 320px;
+  border-radius: 20px;
+  padding: 20px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  font-family: 'Intro Black Alt';
+  color: #000;
+  font-size: 1.6em;
+}
+
+.insertar-codigo button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  filter: drop-shadow(0px 3px 5px rgba(50, 0, 0, .3));
+}
+
+.forbiden .message {
+  display: inline-block;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+.forbiden .message p {
+  margin: 0;
+}
+
+.forbiden .message i {
+  font-size: 2em;
+  color: #FF755A;
+}
+
+.forbiden {
+  text-align: center;
+}
+
+.insert-code {
+  text-align: center;
+}
+
+.insert-code > form {
+  display: inline-flex;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  align-items: center;
+  flex-direction: column;
+}
+
+.insert-code > form label {
+  font-size: 1.4em;
+}
+
+.insert-code > form input {
+  border: 1px solid rgba(0,0,0,.3);
+  padding: 10px;
+  border-radius: 12px;
+  width: 300px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.insert-code > form button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  margin-top: 20px;
+  filter: drop-shadow(0px 3px 5px rgba(50, 0, 0, .3));
+}
+
+body {
+  background-color: #F9FAFF;
+}
+
+a {
+  color: #222;
+}
+
+.logo h1 {
+  color: #424242;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.btn {
+  padding: 10px 30px;
+  border: 0;
+  font-size: 1.2em;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  display: inline-block;
+}
+
+.content-wrapper {
+  padding: 50px 30px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  background-color: #15C5B8;
+  color: #fff;
+}
+
+.botones-ingreso .btn {
+  width: 100%;
+  display: block;
+  margin: 20px 0;
+}
+
+.nav-list > * {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  padding: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all .3s;
+  cursor: pointer;
+  border: 3px solid transparent;
+}
+
+.nav-list > *:hover {
+  background-color: #dcffce;
+  box-shadow: 0 0 0 rgba(0,0,0,.2);
+  border-color: rgba(0,0,0,.2);
+}
+
+.nav-list > *:nth-child(2):hover {
+  background-color: #daceff;
+}
+
+.nav-list > *:nth-child(3):hover {
+  background-color: #ffcece;
+}
+
+.nav-list > *:nth-child(4):hover {
+  background-color: #fffbce;
+}
+
+.nav-list > *:nth-child(5):hover {
+  background-color: #cee6ff;
+}
+
+.nav-list > * img {
+  width: 80px;
+  margin-right: 30px;
+}
+
+.nav-list > * h2 {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.nav-list > * p {
+  margin: 0;
+  text-align: left;
+}
+
+.nav-list > *:after {
+  content: "\e901";
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  margin-top: -12px;
+  font-size: 1.5em;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all .3s;
+}
+
+.nav-list > *:hover:after {
+  opacity: .8;
+  transform: translateX(0);
+}
+
+.single-categoria header {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.single-categoria header img {
+  width: 120px;
+  margin-right: 25px;
+}
+
+.single-categoria header h2 {
+  font-size: 3em;
+  margin: 0;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.single-categoria header p {
+  margin: 0;
+}
+
+.volver {
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.tarea {
+  display: flex;
+  text-align: left;
+  margin-bottom: 15px;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  transition: all .3s;
+  cursor: pointer;
+  outline: 1px solid rgba(0,0,0,0);
+}
+
+.tarea:hover {
+  background-color: #f9f9f9;
+  outline: 1px dashed rgba(0,0,0,.1);
+  box-shadow: 0 0 2px rgba(0,0,0,.1);
+}
+
+.tarea.tachada {
+  background-color: #f9f9f9;
+  outline: 1px dashed rgba(0,0,0,.1);
+  box-shadow: 0 0 2px rgba(0,0,0,.1);
+  opacity: .6;
+}
+
+.tarea.tachada h3 {
+  text-decoration: line-through;
+}
+
+.tarea.tachada i:before {
+  content: "\e909";
+}
+
+.tarea i {
+  margin-right: 15px;
+}
+
+.tarea h3 {
+  margin: 0;
+}
+
+.nueva-tarea {
+  position: relative;
+} 
+
+.nueva-tarea:before {
+  content: "\e90d";
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 10px;
+  top: 23px;
+  font-size: 1.4em;
+}
+
+.nueva-tarea input {
+  background: none;
+  width: 100%;
+  padding: 15px 15px 15px 40px;
+  border: 0;
+  border-bottom: 2px solid rgba(0,0,0,.4);
+  margin-top: 10px;
+  outline: 0;
+  font-size: 1.1em;
+  transition: all .3s;
+}
+
+.nueva-tarea input:focus {
+  border-color: #15C5B8;
+}
+
+.nueva-tarea .btn {
+  display: block;
+  margin-top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+}
+
+.nueva-tarea input:focus + .btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-leave-active {
+  transition: all .3s;
+}
+.slide-fade-enter-active {
+  transition: all .6s;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+  footer .social {
+    width: auto;
+  }
+
+  .reuniones h1 {
+    font-size: 7vw;
+  }
+
+  .reuniones h2 {
+    font-size: 5vw;
+  }
+
+  .reunion-list > h3 {
+    font-size: 4vw;
+  }
+
+  .reunion-list {
+    border-radius: 30px 30px 0 0;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  section.full-screen {
+    height: auto;
+  }
+  
+  header {
+    display: block;
+    text-align: center;
+  }
+
+  /* header ul {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  } */
+
+  header > div {
+    display: block;
+  }
+
+  header .logo {
+    margin: 0;
+  }
+
+  .user-thumb {
+    display: inline-flex;
+    margin-top: 10px;
+    font-size: .8em;
+  }
+
+  .ms-bullets.ms-dir-v {
+    top: 50%;
+  }
+
+  .col-33,
+  .col-70,
+  .col-30
+  {
+    width: 80%;
+    margin: 15px 0;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fixed-buttons {
+    bottom: 1%;
+  }
+
+  .fixed-buttons a {
+    width: auto;
+    font-size: 1.2em;
+    margin-bottom: 7px;
+  }
+
+  .fixed-buttons a img {
+    margin-left: 15px;
+    width: 25px;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .logo-footer {
+    margin-right: 15px;
+  }
+
+  footer .social {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .login-wrapper img {
+    width: 100px;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .streaming {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .insert-code > form input {
+    width: 200px;
+  }
+
+  .insertar-codigo input {
+    width: 100%;
+  }
+
+  .col-33,
+  .col-70,
+  .col-30 
+  {
+    width: 100%;
+  }
+
+  .galeria-videos {
+    padding: 30px;
+  }
+
+  .noticias {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .single-noticia q {
+    font-size: 2em;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  header ul {
+    font-size: .8em;
+  }
+
+  header li {
+    margin: 0 3px;
+  }
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

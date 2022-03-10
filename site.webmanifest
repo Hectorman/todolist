@@ -1,0 +1,12 @@
+{
+  "short_name": "Espacios",
+  "name": "Espacios de escucha",
+  "icons": [{
+    "src": "assets/img/apple-icon.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  }],
+  "start_url": "https://espaciosdeescucha.comisiondelaverdad.co",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa"
+}
