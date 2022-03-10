@@ -51,15 +51,11 @@
 
           <div class="user-thumb">
 
-            <?php if ( $this->session->userdata['logged_in']['admin'] ) { ?>
+            
 
-              <a href="admin"><span><?php echo $this->session->userdata['logged_in']['nombre']; ?></span></a>
+              <a href="#" class="profile-popup-link"><span><?php echo $this->session->userdata['logged_in']['nombre']; ?></span></a>
 
-            <?php } else { ?>
-
-              <a href="#profile-popup" class="profile-popup-link"><span><?php echo $this->session->userdata['logged_in']['nombre']; ?></span></a>
-
-            <?php } ?>
+            
 
             <img src="<?php echo base_url(); ?>assets/img/user-icon.png" />
 

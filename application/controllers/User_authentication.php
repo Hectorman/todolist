@@ -80,14 +80,7 @@ Class User_Authentication extends CI_Controller {
                 $session_data = array(
                     'nombre'  => $result[0]->nombre,
                     'email'   => $result[0]->email,
-                    'ciudad'  => $result[0]->ciudad,
                     'id'      => $result[0]->id,
-                    'admin'   => $result[0]->admin
-                );
-
-                $ingreso_data = array(
-                    'id_usuario' => $result[0]->id,
-                    'fecha' => date('Y-m-d H:i:s')
                 );
 
                 // Add user data in session
