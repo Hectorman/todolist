@@ -193,6 +193,8 @@ var movinApps = new Vue({
 
             e.preventDefault();
 
+            var vueObj = this;
+
             var $target = $(e.target),
                 $parent = $target.hasClass('tarea') ? $target : $target.parents('.tarea'),
                 id_tarea = $parent.data('id');
@@ -207,9 +209,9 @@ var movinApps = new Vue({
                 context: document.body
             }).done(function( data ) {
        
-                $parent.addClass('tachada');
+                vueObj.getTareaByID( id_tarea ).eliminada = true;
        
-                console.log( data );
+                vueObj.$forceUpdate();
        
             })
             .fail(function( error ) {
@@ -230,7 +232,19 @@ var movinApps = new Vue({
 
             return contador;
 
-        } 
+        },
+        getTareaByID: function( id ) {
+
+            for (let index = 0; index < this.tareas.length; index++) {
+                const tarea = this.tareas[index];
+
+                if ( tarea.id == id ) return tarea;
+                
+            }
+
+            return false;
+
+        }
 
     }
 });

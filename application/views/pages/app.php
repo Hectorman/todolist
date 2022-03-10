@@ -60,7 +60,7 @@ if (!isset($this->session->userdata['logged_in'])) {
 
             <div class="tareas">
 
-                <div @click="borrarTarea" v-if="categoriaActiva.titulo == tarea.categoria" v-for="tarea in tareas" :data-id="tarea.id" class="tarea">
+                <div @click="borrarTarea" v-if="categoriaActiva.titulo == tarea.categoria" v-for="tarea in tareas" :data-id="tarea.id" :class="['tarea', tarea.eliminada && 'tachada']">
 
                     <i class="icon-checkbox-unchecked"></i>
 

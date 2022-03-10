@@ -1,12 +1,10 @@
 <?php
-// if (isset($this->session->userdata['logged_in'])) {
-//   header("location: " . base_url() . "transmision-en-vivo");
-// }
+if (isset($this->session->userdata['logged_in'])) {
+  header("location: " . base_url() . "app");
+}
 ?>
 <?php $this->load->view('templates/header'); ?>
 
-
-<!-- end of masterslider -->
 
 <div id="app">
 
